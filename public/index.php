@@ -59,3 +59,16 @@ $anotherOneUseCase->execute();
 $anotherOneAnotherUseCase = new \Arquivei\Recruiter\Modules\ClosestString\UseCases\Verificator\UseCase();
 $anotherOneAnotherUseCase->execute($anotherOneUseCase->getResponse());
 //var_dump($anotherOneAnotherUseCase->getResponse());
+
+/**
+ *
+ * EventOrder
+ *
+ */
+$eventGeneratorUseCase = new \Arquivei\Recruiter\Modules\EventOrder\UseCases\Generator\UseCase();
+$eventGeneratorUseCase->execute();
+//var_dump($eventGeneratorUseCase->getResponse());
+
+$eventVerificatorUseCase = new \Arquivei\Recruiter\Modules\EventOrder\UseCases\Verificator\UseCase();
+$eventVerificatorUseCase->execute(['events' => $eventGeneratorUseCase->getResponse()]);
+var_dump($eventVerificatorUseCase->getResponse());
