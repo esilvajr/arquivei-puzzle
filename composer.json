@@ -1,4 +1,15 @@
 {
+    "name": "esilvajr/arq-puzzle",
+    "description": "Biblioteca de integração com o PagSeguro",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "http://github.com/esilvajr"
+        },
+        {
+            "name": "http://github.com/arquivei"
+        }
+    ],
     "require": {
         "phpunit/phpunit": "^7.4",
         "fzaninotto/faker": "^1.8"
